@@ -1,7 +1,7 @@
 <?php
     require_once "config.php";
 
-$id = $_GET['id'];
+$id = $_GET['ID'];
 
 if(isset($id) && !empty(trim(($id)))){
     $sql = "SELECT * FROM travelplan WHERE ID = ?";
@@ -24,9 +24,9 @@ if(isset($id) && !empty(trim(($id)))){
                 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
                 //break down the data from array into vars
-                $city = $row['city'];
-                $country = $row['country'];
-                $year = $row['year'];
+                $city = $row['City'];
+                $country = $row['Country'];
+                $year = $row['Year'];
 
             } else{
                 echo "Something went wrong";

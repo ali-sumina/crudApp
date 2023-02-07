@@ -45,10 +45,10 @@ require_once "config.php";
   if ($result = mysqli_query($conn, $sql)){
       echo "<tbody>";
     while ($row = mysqli_fetch_array($result)){
-          $id = $row['id'];
-          $city = $row['city'];
-          $country = $row['country'];
-          $year = $row['year'];
+          $id = $row['ID'];
+          $city = $row['City'];
+          $country = $row['Country'];
+          $year = $row['Year'];
           echo "<tr>";
           echo "<th scope='row'>". $id ."</th>";
           echo "<td>". $city ."</td>";

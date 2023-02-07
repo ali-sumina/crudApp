@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Feb 06, 2023 at 03:06 AM
+-- Generation Time: Feb 07, 2023 at 12:26 AM
 -- Server version: 5.7.34
 -- PHP Version: 7.4.21
 
@@ -42,7 +42,12 @@ INSERT INTO `travelplan` (`ID`, `City`, `Country`, `Year`) VALUES
 (1, '', '', 0),
 (2, '', '', 0),
 (3, '', '', 0),
-(4, '', '', 0);
+(4, '', '', 0),
+(5, '', '', 0),
+(6, 'Vancouver', 'Vancouver', 2022),
+(7, 'Vancouver', 'Vancouver', 2022),
+(8, 'Vancouver', 'Vancouver', 2022),
+(9, 'Vancouver', 'Canada', 2022);
 
 --
 -- Indexes for dumped tables
@@ -62,7 +67,7 @@ ALTER TABLE `travelplan`
 -- AUTO_INCREMENT for table `travelplan`
 --
 ALTER TABLE `travelplan`
-  MODIFY `ID` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

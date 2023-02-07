@@ -5,7 +5,7 @@ $city = $country = $year = "";
 $city_err = $country_err = $year_err = "";
 $id = $_GET['id'];
 
-if(isset($id) && !empty($id)){
+// if(isset($id) && !empty($id)){
     //if id exists
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -87,15 +87,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     //close connection
     mysqli_close($conn);
 }
-} else {
+ else {
     if(isset($id) && !empty(trim(($id)))){
         $sql = "SELECT * FROM travelplan WHERE ID = ?";
-    
+
         if($stmt = mysqli_stmt_prepare($conn, $sql)) {
+  
+            echo "fnkwem dlew";
+
+            // echo $param_id;
     
+            mysqli_stmt_bind_param($stmt, "i", $param_id);
+              
             $param_id = $id;
-    
-            mysqli_stmt_bind_param($stmt, 'i', $param_id);
     
             //execute. if success, fetch the data
     
@@ -109,9 +113,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     
                     //break down the data from array into vars
-                    $city = $row['city'];
-                    $country = $row['country'];
-                    $year = $row['year'];
+                    $city = $row['City'];
+                    $country = $row['Country'];
+                    $year = $row['Year'];
+
+                    echo $city;
     
                 } else{
                     echo "Something went wrong";

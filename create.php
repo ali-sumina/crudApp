@@ -10,6 +10,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     //delete spaces
     $input_city = trim($_POST["city"]);
+    echo $input_city;
     //check whether it's empty
     if (empty($input_city)){
         $city_err = "Please enter the city you plan to travel to";
@@ -21,7 +22,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $city_err = "Please enter a valid city";
     } //define that input value equals what we will insert into db
     else {
-        $input_city = $city;
+        $city = $input_city;
+        // $input_city = $city;
     }
 
     //Validate Country
@@ -36,7 +38,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $country_err = "Please enter a valid city";
     } //define that input value equals what we will insert into db
     else {
-        $input_country = $country;
+        $country = $input_country;
+        // $input_country = $country;
     }
 
     //Validate Year
@@ -48,7 +51,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $year_err = "Please enter a valid year";
     } //define that input value equals what we will insert into db
     else {
-        $input_year = $city;
+        $year = $input_year;
+        // $input_year = $city;
     }
 
     //check whether errors are empty to continue
